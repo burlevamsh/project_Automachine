@@ -1,5 +1,7 @@
 package com.pages;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -7,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import junit.framework.Assert;
 
 public class ProfileDetails {
 
@@ -39,10 +43,14 @@ public class ProfileDetails {
 	}
 	
 	public void search() throws InterruptedException {
-		driver.findElement(By.xpath("//span[contains(text(),'My personal information')]")).click();;
-		Thread.sleep(1000);
-		System.out.println("user email-id ===>>"+driver.findElement(By.xpath("//input[@id='email']")).getText());
+	//	driver.findElement(By.xpath("//span[contains(text(),'My personal information')]")).click();;
+	//	Thread.sleep(1000);
+		System.out.println("user email-id ===>>"+driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span")).getText());
 		Thread.sleep(10000);
+		String actual=driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span")).getText();
+		String expected="likhitha likki";
+		assertEquals(expected, actual);
+		
 	}
 	
 	public void submit() throws InterruptedException

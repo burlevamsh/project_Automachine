@@ -13,53 +13,53 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "line": 18,
+  "line": 61,
   "name": "",
-  "description": "Login and Get the profile email",
+  "description": "",
   "id": "yourlogo-website;",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 17,
-      "name": "@TC03_Yourlogo"
+      "line": 60,
+      "name": "@TC010_Yourlogo"
     }
   ]
 });
 formatter.step({
-  "line": 20,
-  "name": "launch the chrome application",
+  "line": 62,
+  "name": "open the site in chrome and lanch the website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 21,
-  "name": "the user logged in to the home page",
+  "line": 63,
+  "name": "login to the page",
   "keyword": "When "
 });
 formatter.step({
-  "line": 22,
-  "name": "the user click the profile and get the profile email",
+  "line": 64,
+  "name": "send keys to the newsletters",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ProfileDefinition.launch_the_chrome_application()"
+  "location": "NewsLettersSteps.launch_the_chrome_application()"
 });
 formatter.result({
-  "duration": 16327395649,
+  "duration": 19989671591,
   "status": "passed"
 });
 formatter.match({
-  "location": "ProfileDefinition.the_user_logged_in_to_the_home_page()"
+  "location": "NewsLettersSteps.the_user_logged_in_to_the_home_page_and_signin_the_page()"
 });
 formatter.result({
-  "duration": 7780384554,
+  "duration": 9472565411,
   "status": "passed"
 });
 formatter.match({
-  "location": "ProfileDefinition.the_user_click_the_profile_and_get_the_profile_email()"
+  "location": "NewsLettersSteps.the_user_and_navigate_to_next_page_count_images()"
 });
 formatter.result({
-  "duration": 12792883425,
+  "duration": 3358029786,
   "status": "passed"
 });
 });
